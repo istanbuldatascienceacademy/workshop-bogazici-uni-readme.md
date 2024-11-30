@@ -1,6 +1,7 @@
 # workshop-bogazici-uni-readme.md
 
 #standardSQL
+
 SELECT
   TIMESTAMP_TRUNC(pickup_datetime,
     MONTH) month,
@@ -15,6 +16,7 @@ ORDER BY
 
 
   #standardSQL
+  
 SELECT
   EXTRACT(HOUR
   FROM
@@ -36,6 +38,7 @@ ORDER BY
 
 
   #standardSQL
+  
 WITH params AS (
     SELECT
     1 AS TRAIN,
@@ -72,6 +75,7 @@ OPTIONS
 -- paste the previous training dataset query here
 
 #standardSQL
+
 SELECT
   SQRT(mean_squared_error) AS rmse
 FROM
@@ -109,10 +113,13 @@ FROM
 
   ))
 
+
   SELECT * FROM ML.TRAINING_INFO(model `taxi.taxifare_model`);
 
 
+
   #standardSQL
+  
 SELECT
 *
 FROM
