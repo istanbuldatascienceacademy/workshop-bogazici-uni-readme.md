@@ -1,6 +1,12 @@
 # workshop-bogazici-uni-readme.md
 
+https://www.cloudskillsboost.google/ bir hesap acalım.
+
+explorer sekmesine Getting Started with BigQuery ML yazalım.
+
+
 #standardSQL
+How many trips did Yellow taxis take each month in 2015
 
 SELECT
   TIMESTAMP_TRUNC(pickup_datetime,
@@ -16,7 +22,8 @@ ORDER BY
 
 
   #standardSQL
-  
+What was the average speed of Yellow taxi trips in 2015
+ 
 SELECT
   EXTRACT(HOUR
   FROM
@@ -38,6 +45,8 @@ ORDER BY
 
 
   #standardSQL
+
+
   
 WITH params AS (
     SELECT
