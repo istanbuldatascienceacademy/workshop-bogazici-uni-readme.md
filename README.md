@@ -8,7 +8,8 @@ explorer sekmesine Getting Started with BigQuery ML yazalım.
 #standardSQL
 How many trips did Yellow taxis take each month in 2015
 
-**'sql':**
+
+```sql
 
 SELECT
   TIMESTAMP_TRUNC(pickup_datetime,
@@ -21,7 +22,7 @@ GROUP BY
 ORDER BY
   1
 
-**''':**
+```
 
 
 
