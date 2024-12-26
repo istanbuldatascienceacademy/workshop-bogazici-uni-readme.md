@@ -21,6 +21,9 @@ ORDER BY
 
 
 
+
+
+
   #standardSQL
 What was the average speed of Yellow taxi trips in 2015
  
@@ -44,9 +47,11 @@ ORDER BY
   1
 
 
+
+
+
+
   #standardSQL
-
-
   
 WITH params AS (
     SELECT
@@ -78,10 +83,20 @@ WITH params AS (
   FROM taxitrips
 
 
+
+
+
   CREATE or REPLACE MODEL taxi.taxifare_model
 OPTIONS
   (model_type='linear_reg', labels=['total_fare']) AS
 -- paste the previous training dataset query here
+
+
+
+
+
+
+
 
 #standardSQL
 
@@ -124,6 +139,8 @@ FROM
 
 
   SELECT * FROM ML.TRAINING_INFO(model `taxi.taxifare_model`);
+
+
 
 
 
