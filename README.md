@@ -29,7 +29,7 @@ ORDER BY
 
   #standardSQL
 What was the average speed of Yellow taxi trips in 2015
- 
+```sql 
 SELECT
   EXTRACT(HOUR
   FROM
@@ -48,14 +48,14 @@ GROUP BY
   1
 ORDER BY
   1
-
+```
 
 
 
 
 
   #standardSQL
-  
+```sql  
 WITH params AS (
     SELECT
     1 AS TRAIN,
@@ -85,10 +85,10 @@ WITH params AS (
   SELECT *
   FROM taxitrips
 
+```
 
 
-
-
+```sql
   CREATE or REPLACE MODEL taxi.taxifare_model
 OPTIONS
   (model_type='linear_reg', labels=['total_fare']) AS
@@ -96,13 +96,13 @@ OPTIONS
 
 
 
-
+```
 
 
 
 
 #standardSQL
-
+```sql
 SELECT
   SQRT(mean_squared_error) AS rmse
 FROM
@@ -134,21 +134,23 @@ FROM
     trip_distance > 0 AND fare_amount > 0
     AND MOD(ABS(FARM_FINGERPRINT(CAST(pickup_datetime AS STRING))),1000) = params.EVAL
   )
-
+```
+```sql
   SELECT *
   FROM taxitrips
 
   ))
 
-
+```
+```sql
   SELECT * FROM ML.TRAINING_INFO(model `taxi.taxifare_model`);
-
+```
 
 
 
 
   #standardSQL
-  
+```sql  
 SELECT
 *
 FROM
@@ -185,3 +187,4 @@ FROM
   FROM taxitrips
 
 ));
+```
